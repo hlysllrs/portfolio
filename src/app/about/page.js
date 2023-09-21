@@ -1,67 +1,114 @@
-import styles from './About.module.scss'
+'use client'
+
+import Image from 'next/image'
+import { useState, useTransition } from 'react'
+import TabButton from './components/TabButton'
+import { ABOUT_DATA } from '../data/data'
 
 export default function About() {
-  return (
-    <div className={styles.About}>
-      <img alt="Hailey Sellars" className={styles.photo} />
-      <div className={styles.aboutInfo}>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h3>Skills</h3>
-        <div>
-          <i class="devicon-javascript-plain"></i>
-        </div>
-        <div>
-          <i class="devicon-express-original"></i>
-        </div>
-        <div>
-          <i class="devicon-nodejs-plain"></i>
-        </div>
-        <div>
-          <i class="devicon-mongodb-plain"></i>
-        </div>
-        <div>
-          <i class="devicon-react-original"></i>
-        </div>
-        <div>
-          <i class="devicon-nextjs-original"></i>
-        </div>
-        <div>
-          <i class="devicon-html5-plain"></i>
-        </div>
-        <div>
-          <i class="devicon-css3-plain"></i>
-        </div>
-        <div>
-          <i class="devicon-sass-original"></i>
-        </div>
-        <div>
-          <i class="devicon-vscode-plain"></i>
-        </div>
-        <div>
-          <i class="devicon-git-plain"></i>
-        </div>
-        <div>
-          <i class="devicon-figma-plain"></i>
-        </div>
-        <div>
-          <i class="devicon-photoshop-plain"></i>
-        </div>
-        <div>
-          <i class="devicon-illustrator-plain"></i>
-        </div>
-        <div>
-          <i class="devicon-jest-plain"></i>
-        </div>
-        <button>Download Resume</button>
-      </div>
-    </div>
-  )
+    const [activeTab, setActiveTab] = useState('skills')
+    const [isPending, startTransition] = useTransition()
+
+    const handleTabChange = (id) => {
+        startTransition(() => {
+            setActiveTab(id)
+        })
+    }
+
+    return (
+        <main className="mt-24 text-black">
+            <div className="md:grid md:grid-cols-2 gap-8 items-center p-4 xl:gap-16 sm:py-16 xl:px-16">
+                <div className="bg-slate-200 h-full w-full flex justify-center items-center">
+                    Photo Of Me Here
+                </div>
+                {/* <Image
+                    src="/next.svg"
+                    alt="Hailey Sellars"
+                    width={500}
+                    height={500}
+                /> */}
+                <div className="mt-6 md:mt-0 text-left flex-col height-full">
+                    <p className="text-black md:text-lg text-base">
+                        Technical fashion designer turned software developer.
+                        Fluent in balancing multiple projects and managing
+                        technical processes with ever-changing priorities and
+                        products. I believe in a seamless relationship between
+                        form and function—bringing ideas to life through clean
+                        code and engaging design.
+                    </p>
+                    <div className="flex flex-row mt-8">
+                        <TabButton
+                            selectTab={() => handleTabChange('skills')}
+                            active={activeTab === 'skills'}
+                        >
+                            Skills
+                        </TabButton>
+                        <TabButton
+                            selectTab={() => handleTabChange('education')}
+                            active={activeTab === 'education'}
+                        >
+                            Education
+                        </TabButton>
+                        <TabButton
+                            selectTab={() => handleTabChange('experience')}
+                            active={activeTab === 'experience'}
+                        >
+                            Experience
+                        </TabButton>
+                    </div>
+                    <div className="mt-4">
+                        {ABOUT_DATA.find((tab) => tab.id === activeTab).content}
+                    </div>
+                    <div>
+                        <i className="devicon-javascript-plain"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-express-original"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-nodejs-plain"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-mongodb-plain"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-react-original"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-nextjs-original"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-html5-plain"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-css3-plain"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-sass-original"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-vscode-plain"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-git-plain"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-figma-plain"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-photoshop-plain"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-illustrator-plain"></i>
+                    </div>
+                    <div>
+                        <i className="devicon-jest-plain"></i>
+                    </div>
+                    <button className="mt-3 w-full rounded-full border border-[#4bbd04] bg-transparent px-6 py-3 hover:bg-[#4bbd04] hover:text-[#f6f6f6] sm:w-fit">
+                        Download Resume
+                    </button>
+                </div>
+            </div>
+        </main>
+    )
 }
