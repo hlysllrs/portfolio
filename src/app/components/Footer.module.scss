@@ -1,0 +1,12 @@
+.Footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  a {
+    margin: 0 0.5rem;
+    img {
+      height: 4vmin;
+    }
+  }
+}
