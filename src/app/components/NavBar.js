@@ -4,7 +4,7 @@ import NavAnimation from './NavAnimation'
 import NavLink from './NavLink'
 import MenuOverlay from './MenuOverlay'
 import { useState } from 'react'
-import { Bars3Icon, XmarkIcon } from '@heroicons/react/24/solid'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import ProjectsDropdown from './ProjectsDropdown'
 
 export default function NavBar() {
@@ -33,7 +33,7 @@ export default function NavBar() {
                             onClick={() => setNavMenuOpen(false)}
                             className="flex text-black items-center px-1 py-1 border rounded border-black hover:text-[#4bbd04] hover:border-[#4bbd04]"
                         >
-                            <XmarkIcon className="h-5 w-5 " />
+                            <XMarkIcon className="h-5 w-5 " />
                         </button>
                     ) : (
                         <button
