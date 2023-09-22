@@ -49,7 +49,7 @@ export const ABOUT_DATA = [
     },
 ]
 
-export const PROJECT_CARD_DATA = [
+export const PROJECT_DATA = [
     {
         id: 1,
         title: 'Lounger',
