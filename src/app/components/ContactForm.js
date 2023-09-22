@@ -1,9 +1,10 @@
 'use client'
 
-import { ArrowLongRightIcon } from '@heroicons/react/24/solid'
+import { useState } from 'react'
+import { ArrowLongRightIcon, CheckIcon } from '@heroicons/react/24/solid'
 
 export default function Form() {
-    function handleChange() {}
+    const [emailSent, setEmailSent] = useState(false)
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -14,26 +15,23 @@ export default function Form() {
             subject: e.target.subject.value,
             message: e.target.message.value,
         }
+        const jsonData = JSON.stringify(data)
+        const endpoint = '/api/send'
 
-        try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            })
-            if (!response.ok) {
-                throw new Error('HTTP error! Status: ' + response.status)
-            }
-            const responseData = await response.json()
-            console.log(responseData)
-        } catch (error) {
-            console.error(
-                'there was a problem with the fetch operation ' + error.message
-            )
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: jsonData,
         }
-        console.log(data)
+        const response = await fetch(endpoint, options)
+        const resData = await response.json()
+        console.log(resData)
+        if (response.status === 200) {
+            console.log('message sent')
+            setEmailSent(true)
+        }
     }
 
     return (
@@ -141,6 +139,11 @@ export default function Form() {
                     Get In Touch{' '}
                     <ArrowLongRightIcon className="h-7 w-7 inline" />
                 </button>
+                {emailSent && (
+                    <p className="text-[#4bbd04] text-sm mt-2">
+                        <CheckIcon className="h-7 w-7 inline" /> Email sent!
+                    </p>
+                )}
             </form>
         </div>
     )

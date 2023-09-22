@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Footer() {
     return (
-        <div className="">
+        <footer className="footer">
             <Link
                 href="https://www.linkedin.com/in/hailey-sellars/"
                 target="_blank"
@@ -12,6 +12,6 @@ export default function Footer() {
             <Link href="https://github.com/hlysllrs" target="_blank">
                 <i className="devicon-github-original"></i>
             </Link>
-        </div>
+        </footer>
     )
 }

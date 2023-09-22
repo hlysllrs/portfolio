@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState, useTransition } from 'react'
-import TabButton from './components/TabButton'
+import TabButton from '../components/TabButton'
 import { ABOUT_DATA } from '../data/data'
 
 export default function About() {
@@ -17,7 +17,7 @@ export default function About() {
 
     return (
         <main className="mt-24 text-black">
-            <div className="md:grid md:grid-cols-2 gap-8 items-center p-4 xl:gap-16 sm:py-16 xl:px-16">
+            <div className="md:grid md:grid-cols-2 gap-8 items-center xl:gap-16 sm:py-16 xl:px-16">
                 <div className="bg-slate-200 h-full w-full flex justify-center items-center">
                     Photo Of Me Here
                 </div>
@@ -104,9 +104,13 @@ export default function About() {
                     <div>
                         <i className="devicon-jest-plain"></i>
                     </div>
-                    <button className="mt-3 w-full rounded-full border border-[#4bbd04] bg-transparent px-6 py-3 hover:bg-[#4bbd04] hover:text-[#f6f6f6] sm:w-fit">
+                    <a
+                        href="/assets/hailey-sellars-resume.pdf"
+                        className="mt-3 block w-full rounded-full border border-[#4bbd04] bg-transparent px-6 py-3 hover:bg-[#4bbd04] hover:text-[#f6f6f6] sm:w-fit"
+                        download
+                    >
                         Download Resume
-                    </button>
+                    </a>
                 </div>
             </div>
         </main>

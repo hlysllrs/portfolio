@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function ProjectCard({ imageUrl, title, id }) {
+export default function ProjectCard({ imageUrl, title, id, pathId }) {
     return (
         <div>
             <div
@@ -11,12 +11,7 @@ export default function ProjectCard({ imageUrl, title, id }) {
                 }}
             ></div>
             <h5 className="text-black bg-[#f6f6f6] px-2 pt-2 font-semibold text-xl md:text-2xl hover:text-[#4bbd04]">
-                {id}{' '}
-                <Link
-                    href={`/project/${title.toLowerCase().replace(' ', '-')}`}
-                >
-                    {title}
-                </Link>
+                {id} <Link href={pathId}>{title}</Link>
             </h5>
         </div>
     )
