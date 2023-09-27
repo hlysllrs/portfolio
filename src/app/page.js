@@ -16,14 +16,18 @@ export default function Home() {
     const size = isHovered ? 400 : 40
     return (
         <main className="flex flex-col bg-[#f6f6f6] mt-24">
-            <section className="container relative w-screen py-4">
-                <Image
-                    src={helloImg}
-                    alt="hello"
-                    className="hover:fill-white"
+            <section className="container flex-1 relative w-screen py-4">
+                <div
+                    className="w-full h-full"
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
-                />
+                >
+                    <Image
+                        src={helloImg}
+                        alt="hello"
+                        className="stroke-blue-500"
+                    />
+                </div>
                 <motion.div
                     className="[mask-image:url('../../public/images/mask.svg')] [mask-repeat:no-repeat] absolute w-full h-full transition-transform duration-100 bg-gradient-to-r from-[#4bbd04] to-[#00B8D4] mix-blend-multiply"
                     animate={{
