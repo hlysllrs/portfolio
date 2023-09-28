@@ -1,10 +1,9 @@
 'use client'
 
-import Image from 'next/image'
 import ProjectCard from './components/ProjectCard'
 import { PROJECT_DATA } from './data/data'
 import { motion } from 'framer-motion'
-import helloImg from '../../public/images/hello.svg'
+import HelloImg from '../../public/images/hello.svg'
 import Footer from './components/Footer'
 import useMousePosition from './utils/useMousePosition'
 import { useState } from 'react'
@@ -17,19 +16,15 @@ export default function Home() {
     return (
         <main className="flex flex-col bg-[#f6f6f6] mt-24">
             <section className="container flex-1 relative w-screen py-4">
-                <div
-                    className="w-full h-full"
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                >
-                    <Image
-                        src={helloImg}
-                        alt="hello"
-                        className="stroke-blue-500"
-                    />
+                <div className="w-full h-screen bg-black hover:bg-gradient-to-r from-[#4bbd04] to-[#00B8D4] [mask-image:url('../../public/images/hello.svg')] [mask-repeat:no-repeat]">
+                    {/* <HelloImg
+                        className="h-full w-full hover:bg-gradient-to-r from-black to-white"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    /> */}
                 </div>
                 <motion.div
-                    className="[mask-image:url('../../public/images/mask.svg')] [mask-repeat:no-repeat] absolute w-full h-full transition-transform duration-100 bg-gradient-to-r from-[#4bbd04] to-[#00B8D4] mix-blend-multiply"
+                    className="[mask-image:url('../../public/images/mask.svg')] [mask-repeat:no-repeat] absolute flex-1 w-full h-full transition-transform duration-100 bg-gradient-to-r from-[#4bbd04] to-[#00B8D4]"
                     animate={{
                         WebkitMaskPosition: `${x - size / 2}px ${
                             y - size / 2
