@@ -4,12 +4,12 @@ export const ABOUT_DATA = [
         id: 'skills',
         content: (
             <ul className="list-disc pl-4">
+                <li>JavaScript</li>
                 <li>Node.js</li>
                 <li>Express.js</li>
                 <li>MongoDB</li>
                 <li>React.js</li>
                 <li>Next.js</li>
-                <li>JavaScript</li>
                 <li>CSS</li>
                 <li>Sass</li>
                 <li>Tailwind</li>
@@ -21,16 +21,22 @@ export const ABOUT_DATA = [
         title: 'Education',
         id: 'education',
         content: (
-            <ul>
-                <li>
-                    <span className="font-semibold">General Assembly</span> |
-                    Software Engineering Immersive
+            <ul className="list-disc pl-4">
+                <li className="mb-4">
+                    <div>
+                        <p>General Assembly</p>
+                        <p className="font-normal italic">
+                            Software Engineering Immersive
+                        </p>
+                    </div>
                 </li>
                 <li>
-                    <span className="font-semibold">
-                        The University of Texas at Austin
-                    </span>{' '}
-                    | B.S. Textiles and Apparel Design
+                    <div>
+                        <p>The University of Texas at Austin</p>
+                        <p className="font-normal italic">
+                            B.S. Textiles and Apparel Design
+                        </p>
+                    </div>
                 </li>
             </ul>
         ),
@@ -39,10 +45,14 @@ export const ABOUT_DATA = [
         title: 'Experience',
         id: 'experience',
         content: (
-            <ul>
-                <li>
-                    <span className="font-semibold">General Assembly</span> |
-                    Software Engineering Student
+            <ul className="list-disc pl-4">
+                <li className="mb-4">
+                    <div>
+                        <p>General Assembly</p>
+                        <p className="font-normal italic">
+                            Software Engineering Student
+                        </p>
+                    </div>
                 </li>
             </ul>
         ),
