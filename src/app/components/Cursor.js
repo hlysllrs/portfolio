@@ -1,7 +1,7 @@
 import { forwardRef, useImperativeHandle, useRef } from 'react'
 import gsap from 'gsap'
 
-const Circle = forwardRef(({ size, delay }, ref) => {
+const Cursor = forwardRef(({ size, delay }, ref) => {
     const elRef = useRef()
 
     useImperativeHandle(
@@ -9,7 +9,7 @@ const Circle = forwardRef(({ size, delay }, ref) => {
         () => {
             return {
                 moveTo(x, y) {
-                    gsap.to(elRef.current, { x, y, delay })
+                    gsap.to(elRef.current, { x, y })
                 },
             }
         },
@@ -18,10 +18,10 @@ const Circle = forwardRef(({ size, delay }, ref) => {
 
     return (
         <div
-            className={`circle ${size} bg-green-500 rounded-full blur-md`}
+            className="circle bg-transparent h-24 w-24 rounded-full z-5"
             ref={elRef}
         ></div>
     )
 })
 
-export default Circle
+export default Cursor
