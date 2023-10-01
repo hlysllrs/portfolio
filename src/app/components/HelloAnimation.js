@@ -27,7 +27,6 @@ export default function HelloAnimation() {
 
         const onMove = ({ clientX, clientY }) => {
             cursorRef.current.moveTo(clientX, clientY)
-            gsap.set(cursorRef, { autoAlpha: 1 })
             checkHit()
         }
 

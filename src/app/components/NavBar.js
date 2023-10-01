@@ -14,20 +14,20 @@ export default function NavBar() {
     const navLinks = [
         { title: 'Projects', path: '/projects' },
         { title: 'About', path: '/about' },
-        { title: 'Contact', path: '/contact' },
     ]
     return (
-        <nav className="fixed top-0 left-0 z-5 bg-[#f6f6f6] bg-opacity-100 w-screen">
-            <div className="flex flex-wrap items-center justify-between mx-auto p-4">
+        <nav className="fixed top-0 left-0 z-5 bg-[#f6f6f6] bg-opacity-100 w-screen font-semibold">
+            <div className="grid grid-cols-1 md:grid-cols-12 items-center justify-between mx-auto p-4">
                 <Link
                     href="/"
-                    className="text-lg sm:text-lg md:text-2xl text-black font-semibold hover:text-[#4bbd04]"
+                    className="md:col-span-7 text-lg sm:text-lg md:text-2xl text-black hover:text-[#4bbd04] transition-colors  md:leading-none"
                 >
                     Hailey Sellars is a <NavAnimation />
                     <br />
                     based in New York City.
                 </Link>
-                <div className="mobile-menu block md:hidden ">
+                {/* Mobile Menu for small screens */}
+                <div className="mobile-menu fixed right-4 block md:hidden">
                     {navMenuOpen ? (
                         <button
                             onClick={() => setNavMenuOpen(false)}
@@ -44,8 +44,12 @@ export default function NavBar() {
                         </button>
                     )}
                 </div>
-                <div className="menu hidden md:block md:w-auto" id="navbar">
-                    <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-10 ">
+                {/* Nav Menu for larger screens */}
+                <div
+                    className="menu hidden md:block md:w-full md:col-start-10 lg:col-start-11 col-end-13 justify-self-stretch self-start"
+                    id="navbar"
+                >
+                    <ul className="flex md:flex-row justify-end md:space-x-10 w-full transition-colors ">
                         {/* <p
                             className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-[#4bbd04] hover:cursor-pointer"
                             onClick={() =>

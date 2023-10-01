@@ -11,12 +11,11 @@ export default function NavAnimation() {
                 2000,
                 'Puzzle Enthusiast',
                 2000,
-                'Something Else',
-                2000,
             ]}
             wrapper="span"
             speed={50}
             repeat={Infinity}
+            cursor={false}
         />
     )
 }
