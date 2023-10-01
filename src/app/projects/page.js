@@ -8,12 +8,12 @@ export default function Projects() {
                 {PROJECT_DATA.map((project, i) => (
                     <li
                         key={i}
-                        className="group sm:flex w-full items-end justify-between text-black border-b-2 border-transparent pb-2 md:pb-4 hover:border-[#4bbd04] mb-4"
+                        className="group sm:flex w-full items-end justify-between text-black border-b-2 border-transparent pb-2 md:pb-4 hover:border-accent mb-4"
                     >
                         <NavLink
                             title={`${project.id} ${project.title}`}
                             href={`/projects/${project.pathId}`}
-                            className="group-hover:text-[#4bbd04]"
+                            className="group-hover:text-accent"
                         />
                         <span className="hidden group-hover:flex text-xs pb-3 sm:pb-2 sm:text-sm md:text-base lg:text-lg">
                             {project.description}

@@ -5,7 +5,7 @@ import HelloAnimation from './components/HelloAnimation'
 
 export default function Home() {
     return (
-        <main className="flex flex-col justify-end flex-1 h-full bg-[#f6f6f6] m-4">
+        <main className="flex flex-col justify-end flex-1 h-full bg-background m-4">
             <section className="relative h-full w-full">
                 {/* plain svg image hello for small screens*/}
                 <HelloImg className="md:hidden" />

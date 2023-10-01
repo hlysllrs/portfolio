@@ -9,7 +9,7 @@ import { Draggable } from 'gsap/all'
 export default function HelloAnimation() {
     const cursorRef = useRef()
 
-    const smiles = Array.from({ length: 108 }, (_, index) => {
+    const smiles = Array.from({ length: 124 }, (_, index) => {
         return (
             <div
                 className="smile md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl leading-none rounded-full text-black"
@@ -60,7 +60,7 @@ export default function HelloAnimation() {
                 <Cursor size="lg" ref={cursorRef} delay={0.2} />
             </div>
             <div className="flex-1"></div>
-            <div className="grid grid-cols-[repeat(18,_minmax(0,_1fr))] gap-2 max-h-[39vw] w-full items-center justify-between flex-wrap [mask-image:url('../../public/images/hello.svg')] [mask-repeat:no-repeat] [mask-position:bottom left] overflow-hidden bg-black">
+            <div className="grid grid-cols-[repeat(18,_minmax(0,_1fr))] md:gap-x-2 max-h-[39vw] w-full items-center justify-between flex-wrap [mask-image:url('../../public/images/hello.svg')] [mask-repeat:no-repeat] [mask-position:bottom left] overflow-hidden bg-black">
                 {smiles}
             </div>
         </main>

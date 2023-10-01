@@ -1,6 +1,6 @@
 export default function TabButton({ active, selectTab, children }) {
     const buttonClasses = active
-        ? 'text-[#4bbd04] border-b border-[#4bbd04]'
+        ? 'text-accent border-b border-accent'
         : 'text-black'
 
     return (

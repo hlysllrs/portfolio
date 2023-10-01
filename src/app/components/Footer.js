@@ -6,21 +6,21 @@ export default function Footer() {
             <div className="md:col-span-3 flex md:space-x-10 justify-start">
                 <Link
                     href="mailto:hello@haileysellars.com"
-                    className="hover:text-[#4bbd04]"
+                    className="hover:text-accent"
                 >
                     Email
                 </Link>
                 <Link
                     href="https://www.linkedin.com/in/hailey-sellars/"
                     target="_blank"
-                    className="hover:text-[#4bbd04]"
+                    className="hover:text-accent"
                 >
                     LinkedIn
                 </Link>
                 <Link
                     href="https://github.com/hlysllrs"
                     target="_blank"
-                    className="hover:text-[#4bbd04]"
+                    className="hover:text-accent"
                 >
                     GitHub
                 </Link>
