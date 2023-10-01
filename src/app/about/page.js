@@ -16,8 +16,8 @@ export default function About() {
     }
 
     return (
-        <main className="mt-24 text-black">
-            <div className="md:grid md:grid-cols-2 gap-8 items-center xl:gap-16 sm:py-16 xl:px-16">
+        <main className="text-black mx-4">
+            <div className="md:grid md:grid-cols-2 gap-8 items-center xl:gap-16 xl:px-16">
                 <div className="bg-slate-200 h-full w-full flex justify-center items-center">
                     Photo Of Me Here
                 </div>
