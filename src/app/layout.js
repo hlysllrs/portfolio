@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className="bg-background min-h-screen flex flex-col">
                 <NavBar />
-                <main className="app mt-24 w-screen flex-1 flex flex-col">
+                <main className="app mt-12 md:mt-16 w-screen flex-1 flex flex-col">
                     {children}
                 </main>
                 <Footer />

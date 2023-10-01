@@ -1,4 +1,4 @@
-import { PROJECT_DATA } from '@/app/data/data'
+import { PROJECT_DATA } from '../../data/projectData'
 import Link from 'next/link'
 import { ArrowLongRightIcon } from '@heroicons/react/24/solid'
 

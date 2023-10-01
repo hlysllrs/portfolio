@@ -1,4 +1,4 @@
-import { PROJECT_DATA } from '../data/data'
+import { PROJECT_DATA } from '../data/projectData'
 import NavLink from './NavLink'
 
 export default function ProjectsDropdown({ setProjectsListOpen }) {
