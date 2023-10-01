@@ -20,7 +20,7 @@ export default function NavBar() {
             <div className="grid grid-cols-1 md:grid-cols-12 items-center justify-between mx-auto p-4">
                 <Link
                     href="/"
-                    className="md:col-span-7 text-lg sm:text-lg md:text-2xl text-black hover:text-accent transition-colors  md:leading-none"
+                    className="md:col-span-7 text-lg sm:text-lg md:text-2xl text-black hover:text-accent transition-colors leading-none sm:leading-none md:leading-none"
                 >
                     Hailey Sellars is a <NavAnimation />
                     <br />

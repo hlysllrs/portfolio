@@ -1,11 +1,11 @@
 export default function TabButton({ active, selectTab, children }) {
     const buttonClasses = active
         ? 'text-accent border-b border-accent'
-        : 'text-black'
+        : 'text-black hover:text-accent'
 
     return (
         <button onClick={selectTab}>
-            <p className={`mr-3 font-semibold ${buttonClasses}`}>{children}</p>
+            <p className={`mr-4 font-semibold ${buttonClasses}`}>{children}</p>
         </button>
     )
 }

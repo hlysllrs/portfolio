@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { useState, useTransition } from 'react'
 import TabButton from '../components/TabButton'
 import { ABOUT_DATA } from '../data/data'
+import { ArrowLongRightIcon } from '@heroicons/react/24/solid'
+import Link from 'next/link'
 
 export default function About() {
     const [activeTab, setActiveTab] = useState('skills')
@@ -16,19 +18,19 @@ export default function About() {
     }
 
     return (
-        <main className="text-black mx-4">
-            <div className="md:grid md:grid-cols-2 gap-8 items-center xl:gap-16 xl:px-16">
-                <div className="bg-slate-200 h-full w-full flex justify-center items-center">
-                    Photo Of Me Here
+        <main className="text-black font-semibold flex flex-col flex-1 m-4 text-base md:text-lg leading-tight md:leading-tight">
+            <div className="flex-1 md:grid md:grid-cols-12 gap-2">
+                <div className="col-span-6 h-fit w-full bg-grey bg-opacity-50">
+                    <Image
+                        src="/images/photo.png"
+                        alt="Hailey Sellars"
+                        width={800}
+                        height={800}
+                    />
                 </div>
-                {/* <Image
-                    src="/next.svg"
-                    alt="Hailey Sellars"
-                    width={500}
-                    height={500}
-                /> */}
-                <div className="mt-6 md:mt-0 text-left flex-col height-full">
-                    <p className="text-black md:text-lg text-base">
+
+                <div className="col-start-8 col-end-13 mt-6 md:mt-0 text-left flex flex-col h-full">
+                    <p className="">
                         Technical fashion designer turned software developer.
                         Fluent in balancing multiple projects and managing
                         technical processes with ever-changing priorities and
@@ -56,61 +58,26 @@ export default function About() {
                             Experience
                         </TabButton>
                     </div>
-                    <div className="mt-4">
+                    <div className="mt-4 mb-8 flex-1">
                         {ABOUT_DATA.find((tab) => tab.id === activeTab).content}
                     </div>
-                    <div>
-                        <i className="devicon-javascript-plain"></i>
+                    <div className="flex flex-col">
+                        <a
+                            href="/assets/hailey-sellars-resume.pdf"
+                            className="mt-3 w-full rounded-full border border-accent bg-transparent px-4 py-1 hover:bg-accent hover:text-background sm:w-fit text-center"
+                            target="_blank"
+                        >
+                            Download Resume{' '}
+                            <ArrowLongRightIcon className="h-8 w-8 inline" />
+                        </a>
+                        <Link
+                            href="mailto:hello@haileysellars.com"
+                            className="mt-3 w-full rounded-full border border-accent bg-transparent px-4 py-1 hover:bg-accent hover:text-background sm:w-fit text-center"
+                        >
+                            Get In Touch{' '}
+                            <ArrowLongRightIcon className="h-8 w-8 inline" />
+                        </Link>
                     </div>
-                    <div>
-                        <i className="devicon-express-original"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-nodejs-plain"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-mongodb-plain"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-react-original"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-nextjs-original"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-html5-plain"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-css3-plain"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-sass-original"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-vscode-plain"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-git-plain"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-figma-plain"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-photoshop-plain"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-illustrator-plain"></i>
-                    </div>
-                    <div>
-                        <i className="devicon-jest-plain"></i>
-                    </div>
-                    <a
-                        href="/assets/hailey-sellars-resume.pdf"
-                        className="mt-3 block w-full rounded-full border border-accent bg-transparent px-6 py-3 hover:bg-accent hover:text-background sm:w-fit"
-                        download
-                    >
-                        Download Resume
-                    </a>
                 </div>
             </div>
         </main>
