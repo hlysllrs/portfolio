@@ -16,11 +16,11 @@ export default function NavBar() {
         { title: 'About', path: '/about' },
     ]
     return (
-        <nav className="fixed top-0 left-0 z-5 bg-[#f6f6f6] bg-opacity-100 w-screen font-semibold">
+        <nav className="fixed top-0 left-0 z-5 bg-background bg-opacity-100 w-screen font-semibold">
             <div className="grid grid-cols-1 md:grid-cols-12 items-center justify-between mx-auto p-4">
                 <Link
                     href="/"
-                    className="md:col-span-7 text-lg sm:text-lg md:text-2xl text-black hover:text-[#4bbd04] transition-colors  md:leading-none"
+                    className="md:col-span-7 text-lg sm:text-lg md:text-2xl text-black hover:text-accent transition-colors  md:leading-none"
                 >
                     Hailey Sellars is a <NavAnimation />
                     <br />
@@ -31,14 +31,14 @@ export default function NavBar() {
                     {navMenuOpen ? (
                         <button
                             onClick={() => setNavMenuOpen(false)}
-                            className="flex text-black items-center px-1 py-1 border rounded border-black hover:text-[#4bbd04] hover:border-[#4bbd04]"
+                            className="flex text-black items-center px-1 py-1 border rounded border-black hover:text-accent hover:border-accent"
                         >
                             <XMarkIcon className="h-5 w-5 " />
                         </button>
                     ) : (
                         <button
                             onClick={() => setNavMenuOpen(true)}
-                            className="flex text-black items-center px-1 py-1 border rounded border-black hover:text-[#4bbd04] hover:border-[#4bbd04]"
+                            className="flex text-black items-center px-1 py-1 border rounded border-black hover:text-accent hover:border-accent"
                         >
                             <Bars3Icon className="h-5 w-5 " />
                         </button>
@@ -51,7 +51,7 @@ export default function NavBar() {
                 >
                     <ul className="flex md:flex-row justify-end md:space-x-10 w-full transition-colors ">
                         {/* <p
-                            className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-[#4bbd04] hover:cursor-pointer"
+                            className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-accent hover:cursor-pointer"
                             onClick={() =>
                                 setProjectsListOpen(!projectsListOpen)
                             }

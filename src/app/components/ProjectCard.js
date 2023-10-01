@@ -10,7 +10,7 @@ export default function ProjectCard({ imageUrl, title, id, pathId }) {
                     backgroundSize: 'cover',
                 }}
             ></div>
-            <h5 className="text-black bg-[#f6f6f6] px-2 pt-2 font-semibold text-xl md:text-2xl hover:text-[#4bbd04]">
+            <h5 className="text-black bg-background px-2 pt-2 font-semibold text-xl md:text-2xl hover:text-accent">
                 {id} <Link href={pathId}>{title}</Link>
             </h5>
         </div>

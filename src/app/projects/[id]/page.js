@@ -26,7 +26,7 @@ export default function Project({ params }) {
                 <div className="flex flex-col">
                     <Link
                         href={project.github}
-                        className="text-black text-lg font-semibold hover:text-[#4bbd04]"
+                        className="text-black text-lg font-semibold hover:text-accent"
                         target="_blank"
                     >
                         View GitHub Repo{' '}
@@ -34,7 +34,7 @@ export default function Project({ params }) {
                     </Link>
                     <Link
                         href={project.github}
-                        className="text-black text-lg font-semibold hover:text-[#4bbd04]"
+                        className="text-black text-lg font-semibold hover:text-accent"
                         target="_blank"
                     >
                         View Live Site{' '}

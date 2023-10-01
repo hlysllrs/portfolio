@@ -106,7 +106,7 @@ export default function About() {
                     </div>
                     <a
                         href="/assets/hailey-sellars-resume.pdf"
-                        className="mt-3 block w-full rounded-full border border-[#4bbd04] bg-transparent px-6 py-3 hover:bg-[#4bbd04] hover:text-[#f6f6f6] sm:w-fit"
+                        className="mt-3 block w-full rounded-full border border-accent bg-transparent px-6 py-3 hover:bg-accent hover:text-background sm:w-fit"
                         download
                     >
                         Download Resume
