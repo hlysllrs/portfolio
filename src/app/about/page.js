@@ -18,7 +18,7 @@ export default function About() {
     }
 
     return (
-        <main className="text-black font-semibold flex flex-col flex-1 m-4 text-base md:text-lg leading-tight md:leading-tight">
+        <main className="flex flex-col flex-1 m-4 text-base md:text-lg leading-tight md:leading-tight">
             <div className="flex-1 md:grid md:grid-cols-12 gap-2">
                 <div className="col-span-6 h-fit w-full">
                     <Image
@@ -26,11 +26,12 @@ export default function About() {
                         alt="Hailey Sellars"
                         width={800}
                         height={800}
+                        priority={true}
                     />
                 </div>
 
                 <div className="col-start-8 col-end-13 mt-6 md:mt-0 text-left flex flex-col h-full">
-                    <p className="">
+                    <p>
                         Technical fashion designer turned software developer.
                         Fluent in balancing multiple projects and managing
                         technical processes with ever-changing priorities and

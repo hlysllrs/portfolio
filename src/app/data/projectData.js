@@ -5,7 +5,7 @@ export const PROJECT_DATA = [
         pathId: 'lounger',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
-        image: './images/lounger/home-page.png',
+        image: '/images/lounger/home-page.png',
         github: 'https://github.com/hlysllrs/unit-3-project',
         deployed: 'https://lounger.hlysllrs.me',
     },
@@ -15,7 +15,7 @@ export const PROJECT_DATA = [
         pathId: 'dock-it',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
-        image: './images/lounger/home-page.png',
+        image: '/images/lounger/home-page.png',
         github: 'https://github.com/hlysllrs/unit-3-project',
         deployed: 'https://lounger.hlysllrs.me',
     },
@@ -25,7 +25,7 @@ export const PROJECT_DATA = [
         pathId: 'brick-breaker',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
-        image: './images/lounger/home-page.png',
+        image: '/images/lounger/home-page.png',
         github: 'https://github.com/hlysllrs/unit-3-project',
         deployed: 'https://lounger.hlysllrs.me',
     },
@@ -35,7 +35,7 @@ export const PROJECT_DATA = [
         pathId: 'bazaar',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
-        image: './images/lounger/home-page.png',
+        image: '/images/lounger/home-page.png',
         github: 'https://github.com/hlysllrs/unit-3-project',
         deployed: 'https://lounger.hlysllrs.me',
     },
