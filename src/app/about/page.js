@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState, useTransition } from 'react'
 import TabButton from '../components/TabButton'
-import { ABOUT_DATA } from '../data/data'
+import { ABOUT_DATA } from '../data/aboutData'
 import { ArrowLongRightIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 
@@ -18,19 +18,20 @@ export default function About() {
     }
 
     return (
-        <main className="text-black font-semibold flex flex-col flex-1 m-4 text-base md:text-lg leading-tight md:leading-tight">
+        <main className="flex flex-col flex-1 m-4 text-base md:text-lg leading-tight md:leading-tight">
             <div className="flex-1 md:grid md:grid-cols-12 gap-2">
-                <div className="col-span-6 h-fit w-full bg-grey bg-opacity-50">
+                <div className="col-span-6 h-fit w-full">
                     <Image
                         src="/images/photo.png"
                         alt="Hailey Sellars"
                         width={800}
                         height={800}
+                        priority={true}
                     />
                 </div>
 
                 <div className="col-start-8 col-end-13 mt-6 md:mt-0 text-left flex flex-col h-full">
-                    <p className="">
+                    <p>
                         Technical fashion designer turned software developer.
                         Fluent in balancing multiple projects and managing
                         technical processes with ever-changing priorities and

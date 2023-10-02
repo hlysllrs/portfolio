@@ -5,8 +5,8 @@ import HelloAnimation from './components/HelloAnimation'
 
 export default function Home() {
     return (
-        <main className="flex flex-col justify-end flex-1 h-full bg-background m-4">
-            <section className="relative h-full w-full">
+        <main className="flex-1 h-full bg-background m-4">
+            <section className="relative flex flex-col justify-end h-full w-full">
                 {/* plain svg image hello for small screens*/}
                 <HelloImg className="md:hidden" />
                 {/* hello animation for larger screens */}
@@ -15,16 +15,3 @@ export default function Home() {
         </main>
     )
 }
-
-/*
-// project card
-{PROJECT_DATA.map((project) => (
-    <ProjectCard
-        key={project.id}
-        imageUrl={project.image}
-        title={project.title}
-        id={project.id}
-        pathId={project.pathId}
-    />
-))}
-</div> */

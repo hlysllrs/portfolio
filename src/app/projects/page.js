@@ -1,26 +1,21 @@
-import { PROJECT_DATA } from '../data/data'
-import NavLink from '../components/NavLink'
+import { PROJECT_DATA } from '../data/projectData'
+import ProjectCard from '../components/ProjectCard'
 
 export default function Projects() {
     return (
-        <div className="mt-24 text-4xl sm:text-5xl md:text-6xl lg:7xl md:pt-4">
-            <ul>
-                {PROJECT_DATA.map((project, i) => (
-                    <li
-                        key={i}
-                        className="group sm:flex w-full items-end justify-between text-black border-b-2 border-transparent pb-2 md:pb-4 hover:border-accent mb-4"
-                    >
-                        <NavLink
-                            title={`${project.id} ${project.title}`}
-                            href={`/projects/${project.pathId}`}
-                            className="group-hover:text-accent"
-                        />
-                        <span className="hidden group-hover:flex text-xs pb-3 sm:pb-2 sm:text-sm md:text-base lg:text-lg">
-                            {project.description}
-                        </span>
-                    </li>
+        <main className="flex flex-col flex-1 m-4 text-base md:text-lg leading-tight md:leading-tight">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {PROJECT_DATA.map((project) => (
+                    <ProjectCard
+                        key={project.id}
+                        imageUrl={project.image}
+                        title={project.title}
+                        id={project.id}
+                        pathId={project.pathId}
+                        description={project.description}
+                    />
                 ))}
-            </ul>
-        </div>
+            </div>
+        </main>
     )
 }
