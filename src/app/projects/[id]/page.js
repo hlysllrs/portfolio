@@ -1,3 +1,5 @@
+'use client'
+
 import { PROJECT_DATA } from '../../data/projectData'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -11,7 +13,7 @@ export default function Project({ params }) {
             <div className="md:relative md:max-h-full flex-1 md:grid md:grid-cols-12 gap-4">
                 <div className="md:col-span-7 justify-self-stretch md:max-h-full w-full md:overflow-y-auto md:scrollbar-hide md:overflow-x-hidden flex flex-col">
                     <Image
-                        src={project.image}
+                        src={project.image1}
                         alt={project.title}
                         width={2000}
                         height={1000}
@@ -20,7 +22,7 @@ export default function Project({ params }) {
                     />
                     <div className="w-full pt-2 md:columns-2 md:gap-2">
                         <Image
-                            src={project.image}
+                            src={project.image2}
                             alt={project.title}
                             width={1000}
                             height={500}
@@ -28,7 +30,24 @@ export default function Project({ params }) {
                             className="pb-2 md:pb-0"
                         />
                         <Image
-                            src={project.image}
+                            src={project.image3}
+                            alt={project.title}
+                            width={1000}
+                            height={500}
+                            priority={false}
+                        />
+                    </div>
+                    <div className="w-full pt-2 md:columns-2 md:gap-2">
+                        <Image
+                            src={project.image4}
+                            alt={project.title}
+                            width={1000}
+                            height={500}
+                            priority={false}
+                            className="pb-2 md:pb-0"
+                        />
+                        <Image
+                            src={project.image5}
                             alt={project.title}
                             width={1000}
                             height={500}
@@ -36,7 +55,16 @@ export default function Project({ params }) {
                         />
                     </div>
                     <Image
-                        src={project.image}
+                        src={project.image6}
+                        alt={project.title}
+                        width={2000}
+                        height={1000}
+                        priority={false}
+                        className="pt-2"
+                    />
+
+                    <Image
+                        src={project.image7}
                         alt={project.title}
                         width={2000}
                         height={1000}
