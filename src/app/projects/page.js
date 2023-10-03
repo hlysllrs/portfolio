@@ -8,7 +8,7 @@ export default function Projects() {
                 {PROJECT_DATA.map((project) => (
                     <ProjectCard
                         key={project.id}
-                        imageUrl={project.headerImage}
+                        imageUrl={project.headerImage.url}
                         title={project.title}
                         id={project.id}
                         pathId={project.pathId}

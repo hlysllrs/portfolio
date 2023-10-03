@@ -13,61 +13,63 @@ export default function Project({ params }) {
             <div className="md:relative md:max-h-full flex-1 md:grid md:grid-cols-12 gap-4">
                 <div className="md:col-span-7 justify-self-stretch md:max-h-full w-full md:overflow-y-auto md:scrollbar-hide md:overflow-x-hidden flex flex-col">
                     <Image
-                        src={project.image1}
+                        src={project.image1.url}
                         alt={project.title}
-                        width={2000}
-                        height={1000}
+                        width={project.image1.width}
+                        height={project.image1.height}
                         priority={true}
                         className="object-cover"
                     />
-                    <div className="w-full pt-2 md:columns-2 md:gap-2">
+                    <div className="w-full pt-2 md:grid md:grid-cols-12 md:gap-2">
                         <Image
-                            src={project.image2}
+                            src={project.image2.url}
                             alt={project.title}
-                            width={1000}
-                            height={500}
+                            width={project.image2.width}
+                            height={project.image2.height}
                             priority={false}
-                            className="pb-2 md:pb-0"
+                            className="pb-2 md:pb-0 md:col-span-7"
                         />
                         <Image
-                            src={project.image3}
+                            src={project.image3.url}
                             alt={project.title}
-                            width={1000}
-                            height={500}
+                            width={project.image3.width}
+                            height={project.image3.height}
                             priority={false}
+                            className="md:col-start-8 col-end-13"
                         />
                     </div>
-                    <div className="w-full pt-2 md:columns-2 md:gap-2">
+                    <div className="w-full pt-2 md:grid md:grid-cols-12 md:gap-2">
                         <Image
-                            src={project.image4}
+                            src={project.image4.url}
                             alt={project.title}
-                            width={1000}
-                            height={500}
+                            width={project.image4.width}
+                            height={project.image4.height}
                             priority={false}
-                            className="pb-2 md:pb-0"
+                            className="pb-2 md:pb-0 md:col-span-5"
                         />
                         <Image
-                            src={project.image5}
+                            src={project.image5.url}
                             alt={project.title}
-                            width={1000}
-                            height={500}
+                            width={project.image5.width}
+                            height={project.image5.height}
                             priority={false}
+                            className="md:col-start-6 col-end-13"
                         />
                     </div>
                     <Image
-                        src={project.image6}
+                        src={project.image6.url}
                         alt={project.title}
-                        width={2000}
-                        height={1000}
+                        width={project.image6.width}
+                        height={project.image6.height}
                         priority={false}
                         className="pt-2"
                     />
 
                     <Image
-                        src={project.image7}
+                        src={project.image7.url}
                         alt={project.title}
-                        width={2000}
-                        height={1000}
+                        width={project.image7.width}
+                        height={project.image7.height}
                         priority={false}
                         className="pt-2"
                     />
