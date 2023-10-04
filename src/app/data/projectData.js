@@ -125,7 +125,7 @@ export const PROJECT_DATA = [
             'MongoDB Memory Server',
         ],
         notes: "Dock It's front end/user interface is currently in development. Images shown are prototypes.",
-        github: 'https://github.com/hlysllrs/dock-it',
+        github: 'https://github.com/hlysllrs/dock-it-api',
         // deployed: 'https://lounger.hlysllrs.me',
         headerImage: {
             url: 'https://res.cloudinary.com/dwnfvw1gh/image/upload/v1696387697/portfolio/dock%20it/HS_dock-it-cover_lugvf6.png',
