@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 import { useState, useTransition } from 'react'
 import TabButton from '../components/TabButton'
 import { ABOUT_DATA } from '../data/aboutData'
@@ -21,9 +21,9 @@ export default function About() {
         <main className="flex flex-col flex-1 m-4 text-base md:text-lg leading-tight md:leading-tight">
             <div className="flex-1 md:grid md:grid-cols-12 gap-2">
                 <div className="col-span-6 h-fit w-full">
-                    <Image
-                        src="https://res.cloudinary.com/dwnfvw1gh/image/upload/v1696382853/portfolio/HS_photo_rfmhfi.png"
-                        alt="Hailey Sellars"
+                    <CldImage
+                        src="/portfolio/HS_photo_rfmhfi"
+                        alt="photo of Hailey Sellars"
                         width={4032}
                         height={3024}
                         priority
