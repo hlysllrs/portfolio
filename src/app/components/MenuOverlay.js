@@ -6,9 +6,9 @@ export default function MenuOverlay({ links, toggleNavMenu }) {
     const [showProjects, setShowProjects] = useState(false)
 
     return (
-        <ul className="flex flex-col py-4 items-center bg-[#f6f6f6] opacity-90 md:hidden">
+        <ul className="flex flex-col py-4 items-center bg-background opacity-90 md:hidden">
             {/* <li
-                className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-[#4bbd04] hover:cursor-pointer"
+                className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-accent hover:cursor-pointer"
                 onClick={() => setShowProjects(!showProjects)}
             >
                 Projects

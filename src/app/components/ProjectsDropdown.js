@@ -1,4 +1,4 @@
-import { PROJECT_DATA } from '../data/data'
+import { PROJECT_DATA } from '../data/projectData'
 import NavLink from './NavLink'
 
 export default function ProjectsDropdown({ setProjectsListOpen }) {
@@ -7,7 +7,7 @@ export default function ProjectsDropdown({ setProjectsListOpen }) {
     return (
         <ul
             onClick={handleClick}
-            className="absolute flex flex-col p-2 items-start md:top-24 md:right-44 md:z-10 bg-[#f6f6f6]"
+            className="absolute flex flex-col p-2 items-start md:top-24 md:right-44 md:z-10 bg-background"
         >
             {PROJECT_DATA.map((project, i) => (
                 <li key={i} className="block w-full text-black">
