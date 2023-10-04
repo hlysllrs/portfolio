@@ -1,5 +1,6 @@
 'use client'
 
+import { CldImage } from 'next-cloudinary'
 import { PROJECT_DATA } from '../../data/projectData'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -12,58 +13,55 @@ export default function Project({ params }) {
         <main className="flex flex-col flex-1 max-h-full m-4 text-base md:text-lg leading-tight md:leading-tight md:overflow-hidden">
             <div className="md:relative md:max-h-full flex-1 md:grid md:grid-cols-12 gap-4">
                 <div className="md:col-span-7 justify-self-stretch md:max-h-full w-full md:overflow-y-auto md:scrollbar-hide md:overflow-x-hidden flex flex-col">
-                    <Image
-                        src={project.image1.url}
+                    <CldImage
+                        src={project.image1.CldPublicID}
                         alt={project.title}
                         width={project.image1.width}
                         height={project.image1.height}
-                        priority
                         className="object-cover"
                     />
                     <div className="w-full pt-2 md:grid md:grid-cols-12 md:gap-2">
-                        <Image
-                            src={project.image2.url}
+                        <CldImage
+                            src={project.image2.CldPublicID}
                             alt={project.title}
                             width={project.image2.width}
                             height={project.image2.height}
-                            priority
                             className="pb-2 md:pb-0 md:col-span-7"
                         />
-                        <Image
-                            src={project.image3.url}
+                        <CldImage
+                            src={project.image3.CldPublicID}
                             alt={project.title}
                             width={project.image3.width}
                             height={project.image3.height}
-                            priority
                             className="md:col-start-8 col-end-13"
                         />
                     </div>
                     <div className="w-full pt-2 md:grid md:grid-cols-12 md:gap-2">
-                        <Image
-                            src={project.image4.url}
+                        <CldImage
+                            src={project.image4.CldPublicID}
                             alt={project.title}
                             width={project.image4.width}
                             height={project.image4.height}
                             className="pb-2 md:pb-0 md:col-span-5"
                         />
-                        <Image
-                            src={project.image5.url}
+                        <CldImage
+                            src={project.image5.CldPublicID}
                             alt={project.title}
                             width={project.image5.width}
                             height={project.image5.height}
                             className="md:col-start-6 col-end-13"
                         />
                     </div>
-                    <Image
-                        src={project.image6.url}
+                    <CldImage
+                        src={project.image6.CldPublicID}
                         alt={project.title}
                         width={project.image6.width}
                         height={project.image6.height}
                         className="pt-2"
                     />
                     {project.image7 && (
-                        <Image
-                            src={project.image7.url}
+                        <CldImage
+                            src={project.image7.CldPublicID}
                             alt={project.title}
                             width={project.image7.width}
                             height={project.image7.height}
