@@ -17,7 +17,7 @@ export default function Project({ params }) {
                         alt={project.title}
                         width={project.image1.width}
                         height={project.image1.height}
-                        priority={true}
+                        priority
                         className="object-cover"
                     />
                     <div className="w-full pt-2 md:grid md:grid-cols-12 md:gap-2">
@@ -26,7 +26,7 @@ export default function Project({ params }) {
                             alt={project.title}
                             width={project.image2.width}
                             height={project.image2.height}
-                            priority={false}
+                            priority
                             className="pb-2 md:pb-0 md:col-span-7"
                         />
                         <Image
@@ -34,7 +34,7 @@ export default function Project({ params }) {
                             alt={project.title}
                             width={project.image3.width}
                             height={project.image3.height}
-                            priority={false}
+                            priority
                             className="md:col-start-8 col-end-13"
                         />
                     </div>
@@ -44,7 +44,6 @@ export default function Project({ params }) {
                             alt={project.title}
                             width={project.image4.width}
                             height={project.image4.height}
-                            priority={false}
                             className="pb-2 md:pb-0 md:col-span-5"
                         />
                         <Image
@@ -52,7 +51,6 @@ export default function Project({ params }) {
                             alt={project.title}
                             width={project.image5.width}
                             height={project.image5.height}
-                            priority={false}
                             className="md:col-start-6 col-end-13"
                         />
                     </div>
@@ -61,25 +59,35 @@ export default function Project({ params }) {
                         alt={project.title}
                         width={project.image6.width}
                         height={project.image6.height}
-                        priority={false}
                         className="pt-2"
                     />
-
-                    <Image
-                        src={project.image7.url}
-                        alt={project.title}
-                        width={project.image7.width}
-                        height={project.image7.height}
-                        priority={false}
-                        className="pt-2"
-                    />
+                    {project.image7 && (
+                        <Image
+                            src={project.image7.url}
+                            alt={project.title}
+                            width={project.image7.width}
+                            height={project.image7.height}
+                            className="pt-2"
+                        />
+                    )}
                 </div>
                 <div className="md:col-start-8 md:col-end-13 mt-6 md:mt-0 text-left flex flex-col justify-between h-full md:overflow-hidden">
                     <div>
-                        <h1 className="text-2xl">{project.title}</h1>
-                        <p className="text-base md:text-lg">
+                        <h1 className="text-2xl pb-4">{project.title}</h1>
+                        <p className="text-base md:text-lg pb-8 leading-tight md:leading-tight">
                             {project.description}
                         </p>
+                        <div className="pb-8">
+                            <p className="pb-1">Built With:</p>
+                            <ul className="list-disc pl-5 leading-snug md:leading-snug">
+                                {project.dependencies.map((dep, idx) => (
+                                    <li key={idx}>{dep}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        {project.notes && (
+                            <p className="text-xs">{project.notes}</p>
+                        )}
                     </div>
                     <div className="flex flex-col">
                         <Link
@@ -90,14 +98,16 @@ export default function Project({ params }) {
                             View GitHub Repo{' '}
                             <ArrowLongRightIcon className="h-8 w-8 inline" />
                         </Link>
-                        <Link
-                            href={project.deployed}
-                            className="mt-3 w-full rounded-full border border-accent bg-transparent px-4 py-1 hover:bg-accent hover:text-background sm:w-fit text-center"
-                            target="_blank"
-                        >
-                            View Live Demo{' '}
-                            <ArrowLongRightIcon className="h-8 w-8 inline" />
-                        </Link>
+                        {project.deployed && (
+                            <Link
+                                href={project.deployed}
+                                className="mt-3 w-full rounded-full border border-accent bg-transparent px-4 py-1 hover:bg-accent hover:text-background sm:w-fit text-center"
+                                target="_blank"
+                            >
+                                View Live Demo{' '}
+                                <ArrowLongRightIcon className="h-8 w-8 inline" />
+                            </Link>
+                        )}
                     </div>
                 </div>
             </div>

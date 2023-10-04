@@ -22,11 +22,11 @@ export default function About() {
             <div className="flex-1 md:grid md:grid-cols-12 gap-2">
                 <div className="col-span-6 h-fit w-full">
                     <Image
-                        src="/images/photo.png"
+                        src="https://res.cloudinary.com/dwnfvw1gh/image/upload/v1696382853/portfolio/HS_photo_rfmhfi.png"
                         alt="Hailey Sellars"
-                        width={800}
-                        height={800}
-                        priority={true}
+                        width={4032}
+                        height={3024}
+                        priority
                     />
                 </div>
 

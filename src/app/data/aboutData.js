@@ -12,7 +12,7 @@ export const ABOUT_DATA = [
                 <li>Next.js</li>
                 <li>CSS</li>
                 <li>Sass</li>
-                <li>Tailwind</li>
+                <li>Tailwind CSS</li>
                 <li>Figma</li>
             </ul>
         ),
