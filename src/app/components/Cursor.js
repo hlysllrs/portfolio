@@ -1,7 +1,7 @@
 import { forwardRef, useImperativeHandle, useRef } from 'react'
 import gsap from 'gsap'
 
-const Cursor = forwardRef(({ size, delay }, ref) => {
+const Cursor = forwardRef((props, ref) => {
     const elRef = useRef()
 
     useImperativeHandle(
@@ -13,7 +13,7 @@ const Cursor = forwardRef(({ size, delay }, ref) => {
                 },
             }
         },
-        [delay]
+        []
     )
 
     return (
@@ -23,5 +23,7 @@ const Cursor = forwardRef(({ size, delay }, ref) => {
         ></div>
     )
 })
+
+Cursor.displayName = 'Cursor'
 
 export default Cursor
