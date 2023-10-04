@@ -32,12 +32,13 @@ export default function About() {
 
                 <div className="col-start-8 col-end-13 mt-6 md:mt-0 text-left flex flex-col h-full">
                     <p>
-                        Technical fashion designer turned software developer.
-                        Fluent in balancing multiple projects and managing
-                        technical processes with ever-changing priorities and
-                        products. I believe in a seamless relationship between
-                        form and function—bringing ideas to life through clean
-                        code and engaging design.
+                        Technical fashion designer turned software engineer.
+                        After six years in the fashion industry, helping to
+                        bring physical products to reality, I am now applying my
+                        problem-solving skills to the digital world. I believe
+                        in a seamless relationship between form and
+                        function—bringing ideas to life through clean code and
+                        engaging design.
                     </p>
                     <div className="flex flex-row mt-8">
                         <TabButton
