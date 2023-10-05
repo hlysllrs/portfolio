@@ -65,7 +65,7 @@ export default function About() {
                     </div>
                     <div className="flex flex-col">
                         <a
-                            href="/assets/hailey-sellars-resume.pdf"
+                            href="https://drive.google.com/file/d/1WLyLOnAxs8tWbQy3KjYWdbYixVg7XrUB/view?usp=sharing"
                             className="mt-3 w-full rounded-full border border-accent bg-transparent px-4 py-1 hover:bg-accent hover:text-background sm:w-fit text-center"
                             target="_blank"
                         >
