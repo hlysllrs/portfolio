@@ -16,7 +16,7 @@ export default function NavBar() {
         { title: 'About', path: '/about' },
     ]
     return (
-        <nav className="fixed top-0 left-0 z-5 bg-background bg-opacity-100 w-screen font-semibold">
+        <nav className="fixed top-0 left-0 z-10 bg-background bg-opacity-100 w-screen font-semibold">
             <div className="grid grid-cols-1 md:grid-cols-12 items-center justify-between mx-auto p-4">
                 <Link
                     href="/"

@@ -24,9 +24,9 @@ export default function MenuOverlay({ links, toggleNavMenu }) {
             {links.map((link, i) => (
                 <li key={i}>
                     <NavLink
+                        onClick={() => toggleNavMenu(false)}
                         title={link.title}
                         href={link.path}
-                        onClick={() => toggleNavMenu(false)}
                     />
                 </li>
             ))}
