@@ -19,7 +19,7 @@ export const PROJECT_DATA = [
                 icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
             },
             {
-                name: 'Mongoose',
+                name: 'MongoDB',
                 icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg',
             },
             {
@@ -36,15 +36,15 @@ export const PROJECT_DATA = [
             },
             {
                 name: 'Bcrypt',
-                icon: '',
+                icon: 'https://img.icons8.com/glyph-neue/64/security-shield-green.png',
             },
             {
-                name: 'JSON Web Token',
-                icon: 'https://icons8.com/icon/rHpveptSuwDz/json-web-token',
+                name: 'JWT',
+                icon: 'https://img.icons8.com/color/96/java-web-token.png',
             },
             {
                 name: 'DotEnv',
-                icon: '',
+                icon: 'https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.svg',
             },
         ],
         notes: 'Wishlist feature is currently in development. All products are sold by Herman Miller.',
@@ -98,7 +98,20 @@ export const PROJECT_DATA = [
         pathId: 'brick-breaker',
         description:
             "a brick breaker game™ is an HTML browser game based on Atari's classic arcade game, Breakout. The goal of the game is to destroy all the bricks on the screen by using the paddle to bounce the ball toward them, without letting the ball fall below the paddle.",
-        dependencies: ['JavaScript', 'HTML', 'CSS'],
+        dependencies: [
+            {
+                name: 'JavaScript',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg',
+            },
+            {
+                name: 'HTML',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg',
+            },
+            {
+                name: 'CSS',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg',
+            },
+        ],
         // notes: '',
         github: 'https://github.com/hlysllrs/brick-breaker',
         deployed: 'https://hlysllrs.github.io/brick-breaker/',
@@ -146,15 +159,38 @@ export const PROJECT_DATA = [
         description:
             'Dock It is a RESTful API with full CRUD functionality for both personal and team project management. With the Dock it API, users have the ability to create and manage personal projects, create and manage teams and team projects, and create and manage project tasks.',
         dependencies: [
-            'Express.js',
-            'Mongoose',
-            'Bcrypt',
-            'JSON Web Token',
-            'DotEnv',
-            'Artillery',
-            'Jest',
-            'SuperTest',
-            'MongoDB Memory Server',
+            {
+                name: 'Express.js',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+            },
+            {
+                name: 'MongoDB',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg',
+            },
+            {
+                name: 'Bcrypt',
+                icon: 'https://img.icons8.com/glyph-neue/64/security-shield-green.png',
+            },
+            {
+                name: 'JWT',
+                icon: 'https://img.icons8.com/color/96/java-web-token.png',
+            },
+            {
+                name: 'DotEnv',
+                icon: 'https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.svg',
+            },
+            {
+                name: 'Artillery',
+                icon: 'https://raw.githubusercontent.com/artilleryio/artillery/main/packages/artillery/artillery-logo.svg',
+            },
+            {
+                name: 'Jest',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg',
+            },
+            {
+                name: 'SuperTest',
+                icon: 'https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.svg',
+            },
         ],
         notes: "Dock It's front end/user interface is currently in development. Images shown are prototypes.",
         github: 'https://github.com/hlysllrs/dock-it-api',
