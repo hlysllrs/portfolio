@@ -6,16 +6,46 @@ export const PROJECT_DATA = [
         description:
             'Lounger is an e-commerce website for purchasing various kinds of chairs. Customers are able to browse and shop as a guest, or they can choose to create an account to access features such as viewing their order history or creating wishlists.',
         dependencies: [
-            'React.js',
-            'Sass',
-            'Express.js',
-            'Mongoose',
-            'Webpack',
-            'Babel',
-            'Gulp',
-            'Bcrypt',
-            'JSON Web Token',
-            'DotEnv',
+            {
+                name: 'React.js',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+            },
+            {
+                name: 'Sass',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
+            },
+            {
+                name: 'Express.js',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+            },
+            {
+                name: 'Mongoose',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg',
+            },
+            {
+                name: 'Webpack',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-plain.svg',
+            },
+            {
+                name: 'Babel',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-plain.svg',
+            },
+            {
+                name: 'Gulp',
+                icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gulp/gulp-plain.svg',
+            },
+            {
+                name: 'Bcrypt',
+                icon: '',
+            },
+            {
+                name: 'JSON Web Token',
+                icon: 'https://icons8.com/icon/rHpveptSuwDz/json-web-token',
+            },
+            {
+                name: 'DotEnv',
+                icon: '',
+            },
         ],
         notes: 'Wishlist feature is currently in development. All products are sold by Herman Miller.',
         github: 'https://github.com/hlysllrs/lounger',
