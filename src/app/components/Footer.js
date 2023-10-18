@@ -6,6 +6,7 @@ export default function Footer() {
             <div className="md:col-span-3 flex md:space-x-10 justify-start">
                 <Link
                     href="mailto:hello@haileysellars.com"
+                    target="_blank"
                     className="hover:text-accent"
                 >
                     Email
