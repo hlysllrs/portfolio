@@ -139,7 +139,7 @@ export const ABOUT_DATA = [
                 <li>
                     <div className="w-16 h-20 flex flex-col justify-end items-center">
                         <Image
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-line.svg"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
                             height={50}
                             width={50}
                             alt="Adobe Illustrator logo"
@@ -152,7 +152,7 @@ export const ABOUT_DATA = [
                 <li>
                     <div className="w-16 h-20 flex flex-col justify-end items-center">
                         <Image
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
                             height={50}
                             width={50}
                             alt="Photoshop logo"
