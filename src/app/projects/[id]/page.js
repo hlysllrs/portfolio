@@ -18,6 +18,7 @@ export default function Project({ params }) {
                         alt={project.title}
                         width={project.image1.width}
                         height={project.image1.height}
+                        priority
                         className="object-cover"
                     />
                     <div className="w-full pt-2 md:grid md:grid-cols-12 md:gap-2">
@@ -26,6 +27,7 @@ export default function Project({ params }) {
                             alt={project.title}
                             width={project.image2.width}
                             height={project.image2.height}
+                            priority
                             className="pb-2 md:pb-0 md:col-span-7"
                         />
                         <CldImage
@@ -33,6 +35,7 @@ export default function Project({ params }) {
                             alt={project.title}
                             width={project.image3.width}
                             height={project.image3.height}
+                            priority
                             className="md:col-start-8 col-end-13"
                         />
                     </div>
@@ -77,9 +80,25 @@ export default function Project({ params }) {
                         </p>
                         <div className="pb-8">
                             <p className="pb-1">Built With:</p>
-                            <ul className="list-disc pl-5 leading-snug md:leading-snug">
+                            <ul className="leading-snug md:leading-snug flex flex-wrap gap-4">
                                 {project.dependencies.map((dep, idx) => (
-                                    <li key={idx}>{dep}</li>
+                                    <li key={idx}>
+                                        <div className="w-16 h-20 flex flex-col justify-end items-center">
+                                            {dep.icon && (
+                                                <Image
+                                                    src={dep.icon}
+                                                    height={50}
+                                                    width={50}
+                                                    alt={`${dep.icon} logo`}
+                                                    priority
+                                                    className="grayscale brightness-75"
+                                                />
+                                            )}
+                                            <p className="text-xs text-center pt-2">
+                                                {dep.name}
+                                            </p>
+                                        </div>
+                                    </li>
                                 ))}
                             </ul>
                         </div>
